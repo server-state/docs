@@ -9,11 +9,12 @@
         <topicref href="./topics/concepts/frontend_module.dita"/>
         <topicref href="./topics/concepts/repositories___subprojects.dita">
             <topicref href="./topics/concepts/server_base.dita"/>
-            <topicref href="./topics/concepts/web_client.dita"/>
+            <topicref href="./topics/concepts/sm_template.dita"/>
             <topicref href="./topics/concepts/typescript_definitions.dita"/>
+            <topicref href="./topics/concepts/web_client.dita"/>
             <topicref href="./topics/concepts/cli.dita"/>
             <topicref href="./topics/concepts/fem_template.dita"/>
-            <topicref href="./topics/concepts/sm_template.dita"/>
+            <topicref href="topics/concepts/fem_registry.dita"/>
         </topicref>
     </topicref>
 </map>
