@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="org.dita-ot-helper-boilerplate.pdf">
+    <target name="dita2custpdf.init">
+        <property name="customization.dir" 
+            location="${dita.plugin.org.dita-ot-helper-boilerplate.pdf.dir}/cfg" />
+        <property name="pdf2.i18n.skip" value="true" />
+    </target>
+    <target name="dita2custpdf" depends="dita2custpdf.init, dita2pdf2"/>
+</project>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="org.dita-ot-helper-boilerplate.pdf">
+    <require plugin="org.dita.pdf2"/>
+    <feature extension="dita.conductor.transtype.check" value="custpdf"/>
+    <feature extension="dita.transtype.print" value="custpdf"/>
+    <feature extension="dita.conductor.target.relative" file="integrator.xml"/>
+</plugin>

@@ -1,0 +1,8 @@
+{
+  "input": "../end-user-manual.ditamap",
+  "plugins": [
+    "org.dita.pdf2",
+    "../plugins/org.dita-ot-helper.pdf"
+  ],
+  "transtype": "custpdf"
+}
