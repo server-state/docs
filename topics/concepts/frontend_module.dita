@@ -5,8 +5,7 @@
                     Module</indexterm><indexterm>FEM<index-see>Frontend
                 Module</index-see></indexterm></equation-inline></title>
     <shortdesc>A Frontend Module provides a visualization of data from a Server Module that can get
-        used in web-based clients like, e.g., the web-client<draft-comment author="pablo">TODO: Add
-            link to web-client here</draft-comment>.</shortdesc>
+        used in web-based clients like, e.g., the <xref href="web_client.dita"/>.</shortdesc>
     <conbody>
         <p>FEMs are, in the simplest form, the combination of some metadata and a React component
             that follows a standard that makes it possible to integrate them into client software

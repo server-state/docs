@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="repositories___subprojects">
+    <title>Repositories / Subprojects</title>
+    <conbody>
+        <p>The Server State ecosystem consists of several sub-projects and/or repositories. You can
+            see an overview of the most important ones below.</p>
+    </conbody>
+</concept>

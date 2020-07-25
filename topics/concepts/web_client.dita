@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="web_client">
+    <title>Web Client</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <p></p>
+    </conbody>
+    <related-links>
+        <link href="https://github.com/server-state/web-client" scope="external" type="html"
+            format="html">
+            <linktext>GitHub Repository</linktext>
+            <desc>web-client Repository</desc>
+        </link>
+    </related-links>
+</concept>
