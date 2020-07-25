@@ -1,6 +1,19 @@
-# dita-ot-helper-boilerplate
+# Server State Project Documentation
 
-A boilerplate for DITA documentation repositories using the fliegwerk dita-ot-helper
+This repository contains the documentation of the Server State project, written in DITA.
+
+It contains
+
+- Developer Documentation
+- End-user-documentation
+- Guides
+- etc.
+
+For all the Server State sub-projects found within the [_Server State_ GitHub organization](https://github.com/server-state).
+
+One exception to this are auto-generated docs like the ones of Type Definitions generated from the [Typescript Definition repo](https://github.com/server-state/types).
+
+This repository replaces the former "specs" repository.
 
 ## Folders
 
