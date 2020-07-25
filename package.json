@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run build",
-    "build": "dita-ot-helper -i 3.5.1 config.json"
+    "build": "dita-ot-helper -i 3.5.1 build-configs/*.json"
   },
   "author": "Pablo Klaschka",
   "license": "MIT",

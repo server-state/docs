@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="server_module">
+    <title>Server Module (SM)<equation-inline><indexterm>Server Module</indexterm>
+            <indexterm>SM<index-see>Server Module</index-see></indexterm></equation-inline></title>
+    <shortdesc>A Server Module is a function that returns JSON-serializable data that can get sent
+        to clients.</shortdesc>
+    <prolog>
+        <metadata/>
+    </prolog>
+    <conbody>
+        <note>You can find technical information regarding the function definition of an SM at <xref
+                href="https://types.server-state.tech/modules/serverstate.html#smf" format="html"
+                scope="external"/></note>
+        <note type="notice">In the early stages of Server State, SM referred to a usage of a
+            function. This function is was formerly called <q>Server Module Function</q> and is now
+            just called <q>Server Module</q>.<indexterm>SMF<index-see>Server Module
+                    Function</index-see></indexterm><indexterm>Server Module
+            Function</indexterm></note>
+        <p>A SMF should be a <i><codeph>readonly</codeph></i> operation on the system (not changing
+            any files), and</p>
+        <ol id="ol_klk_xz4_lmb">
+            <li>Return a JSON-serializable value on success</li>
+            <li>Throw (or, for asynchronous modules, reject with) an <codeph>Error</codeph> with a
+                descriptive error message (<codeph>throw new Error('what went wrong')</codeph>)</li>
+            <li><b>Not</b> log to the console or do other "active" operations. Handling error
+                messages etc. is up to the SM's consumer (in most cases, the
+                    server-base<draft-comment author="pablo">TODO: Add Link to server-base
+                    here</draft-comment>).</li>
+        </ol>
+        <p>The above guidelines aren't strict rules, but exceptions should be well-justified (for
+            official modules) to allow for consistency and ease of use.</p>
+    </conbody>
+    <related-links>
+        <link href="https://types.server-state.tech/modules/serverstate.html#smf" format="html"
+            scope="external">
+            <desc>Generated technical documentation of the Server Module function
+                implementation</desc>
+        </link>
+    </related-links>
+</concept>

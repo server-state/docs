@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="frontend_module">
+    <title>Frontend Module (FEM)<equation-inline><indexterm>Frontend
+                    Module</indexterm><indexterm>FEM<index-see>Frontend
+                Module</index-see></indexterm></equation-inline></title>
+    <shortdesc>A Frontend Module provides a visualization of data from a Server Module that can get
+        used in web-based clients like, e.g., the web-client<draft-comment author="pablo">TODO: Add
+            link to web-client here</draft-comment>.</shortdesc>
+    <conbody>
+        <p>FEMs are, in the simplest form, the combination of some metadata and a React component
+            that follows a standard that makes it possible to integrate them into client software
+            implementing the required interfaces.</p>
+        <section id="section_v4w_gbp_lmb" audience="developer">
+            <title>Development Process</title>
+            <p>FEMs can get developed using either the tooling provided by Server State or custom
+                solutions implementing the required standards, as established by the Server State
+                specifications.</p>
+            <p>FEMs get packaged into JS-compatible .fem files. These can either get distributed and
+                installed manually or via the official or an unofficial FEM Registry.</p>
+        </section>
+    </conbody>
+    <related-links>
+        <link href="https://registry.server-state.tech/" format="html" scope="external">
+            <linktext>Server State FEM Registry</linktext>
+            <desc>Official FEM Registry</desc>
+        </link>
+        <link href="https://github.com/server-state/web-client" format="html" scope="external">
+            <linktext>web-client</linktext>
+            <desc>web-client Repository</desc>
+        </link>
+    </related-links>
+</concept>
