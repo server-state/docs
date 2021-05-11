@@ -9,6 +9,6 @@
   "author": "Pablo Klaschka",
   "license": "MIT",
   "dependencies": {
-    "dita-ot-helper": "^0.13.0"
+    "dita-ot-helper": "^0.13.1"
   }
 }
