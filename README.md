@@ -6,11 +6,11 @@
 [![GitHub](https://img.shields.io/github/license/server-state/docs)](LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/server_state?style=social)](https://twitter.com/server_state)
 
-This repository contains the documentation for Server State. It is
-available at https://server-state.github.io/docs.
+This repository contains the documentation for Server State. It is available at
+https://server-state.github.io/docs.
 
-_Please note that this **does not** contain technical references for all
-Server State components. For that, please refer to the individual READMEs and other
+_Please note that this **does not** contain technical references for all Server
+State components. For that, please refer to the individual READMEs and other
 resources of the individual modules. Instead, this documentation focuses on more
 general documentation of Server State and how to extend it._
 
@@ -25,13 +25,13 @@ documentation for the project.
 
 ## Templates
 
-The `_templates` folder has a few templates for the most common types of
-pages you need to write to document the project.
+The `_templates` folder has a few templates for the most common types of pages
+you need to write to document the project.
 
 These also include tips and tricks (as comments) as well as valuable snippets
 relevant to this specific type of page (e.g., tutorial)
 
 If you feel like any basic templates are lacking, please search through
-[this repository's issues](https://github.com/server-state/docs/issues)
-for a reference to this type of template. If you don't find any reference to it,
+[this repository's issues](https://github.com/server-state/docs/issues) for a
+reference to this type of template. If you don't find any reference to it,
 please feel free to open an issue for it yourself.
