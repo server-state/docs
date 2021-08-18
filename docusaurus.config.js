@@ -26,7 +26,7 @@ module.exports = {
 					docId: 'intro',
 					position: 'left',
 					label: 'Documentation'
-				},
+				}
 			]
 		},
 		footer: {
@@ -74,8 +74,8 @@ module.exports = {
 					title: 'More',
 					items: [
 						{
-							label: "Internal documentation",
-							href: "/internal"
+							label: 'Internal documentation',
+							href: '/internal'
 						},
 						{
 							label: "Writer's Guide",
@@ -114,8 +114,7 @@ module.exports = {
 			require.resolve('@cmfcmf/docusaurus-search-local'),
 			{
 				docsRouteBasePath: '/docs',
-				indexBlog: false,
-				style: undefined
+				indexBlog: false
 			}
 		],
 		[

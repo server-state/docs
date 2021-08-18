@@ -17,6 +17,33 @@
 	--ifm-code-font-size: 95%;
 }
 
+.dsla-search-wrapper .aa-DetachedSearchButton {
+	padding-right: 1em;
+}
+
+body.dsla-search-wrapper,
+body[data-theme='light'] .dsla-search-wrapper,
+body.aa-DetachedOverlay,
+body[data-theme='light'] .aa-DetachedOverlay {
+	/* Search bar colors */
+	--aa-text-color-rgb: 0, 0, 0;
+	--aa-primary-color-rgb: 255, 193, 7;
+	--aa-input-border-color-rgb: 255, 193, 7;
+	--aa-muted-color-rgb: 128, 128, 128;
+	--aa-icon-color-rgb: var(--aa-muted-color-rgb);
+}
+
+body.dark .dsla-search-wrapper,
+body[data-theme='dark'] .dsla-search-wrapper,
+body.dark .aa-DetachedOverlay,
+body[data-theme='dark'] .aa-DetachedOverlay {
+	/* Search bar colors */
+	--aa-text-color-rgb: 255, 255, 255;
+	--aa-primary-color-rgb: 255, 193, 7;
+	--aa-input-border-color-rgb: 255, 193, 7;
+	--aa-muted-color-rgb: 230, 230, 230;
+}
+
 .docusaurus-highlight-code-line {
 	background-color: rgba(0, 0, 0, 0.1);
 	display: block;
