@@ -4,7 +4,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
 	title: 'Server State',
-	tagline: 'A NodeJS and React-based ecosystem to inspect the state of your servers.',
+	tagline:
+		'A NodeJS and React-based ecosystem to inspect the state of your servers.',
 	url: 'https://www.server-state.tech/',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
@@ -25,7 +26,7 @@ module.exports = {
 					docId: 'intro',
 					position: 'left',
 					label: 'Documentation'
-				}
+				},
 			]
 		},
 		footer: {
@@ -62,7 +63,7 @@ module.exports = {
 						{
 							label: 'Twitter',
 							href: 'https://twitter.com/server_state'
-						},
+						}
 						// {
 						// 	label: 'YouTube',
 						// 	href: 'https://www.youtube.com/channel/UC1mwTgqCY5-G1RouptOXnSg'
@@ -72,6 +73,10 @@ module.exports = {
 				{
 					title: 'More',
 					items: [
+						{
+							label: "Internal documentation",
+							href: "/internal"
+						},
 						{
 							label: "Writer's Guide",
 							href: '/writers-guide'
@@ -111,6 +116,16 @@ module.exports = {
 				docsRouteBasePath: '/docs',
 				indexBlog: false,
 				style: undefined
+			}
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'internal',
+				path: 'internal',
+				routeBasePath: 'internal',
+				sidebarPath: require.resolve('./sidebars-internal.js')
+				// ... other options
 			}
 		]
 	],
