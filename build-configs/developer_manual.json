@@ -1,8 +1,0 @@
-{
-  "input": "../developer_manual.ditamap",
-  "plugins": [
-    "org.dita.pdf2",
-    "../plugins/org.dita-ot-helper-boilerplate.pdf"
-  ],
-  "transtype": "custpdf"
-}

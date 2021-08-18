@@ -1,0 +1,25 @@
+name: Prettier Auto Fix on main
+# auto-fixes linting errors in `main` this allows us to skip any Pull Request
+# adjustments since linting issues will be resolved automatically as soon as
+# the branch is merged
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  prettier-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ADMIN_REPO_TOKEN }}
+          ref: ${{ github.head_ref }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Run prettier
+        run: npm run prettier:fix
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message:
+            'style: :rotating_light: Fix prettier issues in `main` automatically'

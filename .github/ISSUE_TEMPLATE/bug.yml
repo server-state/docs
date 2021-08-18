@@ -1,0 +1,36 @@
+name: Bug Report
+description: Reporting wrong documentation / typos / etc.
+title: 'Bug: '
+labels:
+  - 'bug'
+  - 'documentation'
+body:
+  - type: input
+    attributes:
+      label: 'URL'
+      description: 'URL of the affected page'
+      placeholder: 'https://www.server-state.tech/docs/'
+  - type: checkboxes
+    attributes:
+      label: 'Affected content type'
+      options:
+        - label: 'Text'
+        - label: 'Image/Diagram'
+        - label: 'Code sample'
+        - label: 'other (please specify in comments)'
+  - type: textarea
+    attributes:
+      label: 'What I expected'
+      description: 'What you would have expected the documentation to say'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 'What I instead saw'
+      description: 'What the documentation currently says'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 'Additional comments'
+      description: 'Whatever other context you want to provide'

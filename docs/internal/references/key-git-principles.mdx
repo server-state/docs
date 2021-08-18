@@ -1,0 +1,134 @@
+---
+title: Key Git Principles
+description:
+  Critical principles for contributing to and maintaining the Server State repositories
+---
+
+<!--
+Reference
+=========
+
+=== When to use this template:
+When you're documenting some topic so that users (e.g., ecosystem developers)
+can quickly lookup a fact. These articles typically consist of a list, a
+definition list, a table, or some other form of "quick-to-lookup" information.
+
+=== When not to use this template:
+Do not use a reference article to explain a concept. You should keep additional
+information within the reference article to a minimum so that knowledgeable users
+can quickly see the facts that are relevant to them. You can link to concepts and
+other topics to explain specific concepts, if necessary.
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Keep the amount of additional information to a minimum (focus on the facts)
+- If necessary, link to concept topics. Do not explain them in the article
+- Use a suitable form of content so that readers can quickly look up the desired
+  information (e.g., a table, a list, a diagram, or something else)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference } from '/components';
+
+<!-- Short description of what information this document provides: -->
+
+This document provides an overview of the fundamental principles we follow
+within our GitHub repositories.
+
+<!-- Content (e.g., a table, a list, a diagram, or a definition list) -->
+
+## Be kind!
+
+Yes, it sounds silly, but it's probably the most important principle of them
+all. Open-Source contributions are, in 99 % of the cases, side-projects.
+Open-Source is an excellent principle, and you can be proud to contribute to the
+pool of open-source software. Don't use comments like "RTFM!" in this community.
+
+Contributing to an open-source project is scary enough already: Your code is
+available for the world to see (and judge). But you do need and should
+appreciate these contributions. Therefore, if the best you can do is post some
+discouraging comment about why something is "just bad", keep it to yourself!
+
+Constructive criticism is appreciated, but you should always combine it with
+explicit appreciation for the time the other person has taken.
+
+:::caution
+
+Online comments often get misinterpreted in the worst possible way (as it is,
+unfortunately, also the safest way for the person receiving them).
+Unfortunately, misunderstandings happen far sooner than you might think,
+especially when they begin to cross cultures and languages. So please keep that
+in mind when writing comments.
+
+:::
+
+## Keep `main` instantly releasable
+
+**Always** keep the state of the main branch releasable. As this project
+implements automation in such a way that pre-configured tools automatically
+release the correct kind of semantic release on the press of a button (which,
+theoretically, anyone should be able to press). Pressing that button should
+result in a good release whenever it gets pressed.
+
+:::info
+
+Keeping `main` instantly releasable enables this project to release changes in
+no time, if needed or wanted
+
+:::
+
+## One branch per change
+
+Don't try to put more than one kind of change (bug fix, feature, or anything
+else) into a single branch, except if explicitly advised to do so by one of the
+maintainers. Having one branch per change ensures the ability to correctly merge
+it with a conventional commit message, should the need arise, and guarantees
+correct generation of release notes and changelog in releases.
+
+## Use the conventional commit commit-name system
+
+The conventional commit system lets this project generate release notes and the
+required semantic type of release at the push of a button without having to
+think about it (sticking with the instantly releasable theme).
+
+So don't worry if you might do something wrong. Even the "worst" of mistakes a
+maintainer can fix. Either when merging your Pull Request (by squashing the
+commits with a new commit message) or another way.
+
+<Reference to="./conventional-commit-types">
+	Choose the correct conventional commit type
+</Reference>
+
+## Don't be afraid to ask
+
+While everyone claims that JavaScript and Java are easy compared to other
+languages (that may or may not be the case), what this project uses is a rather
+complex and a large ecosystem with plenty of tooling.
+
+While, at its core, it's still "easy old JS or Java," a lot might not be
+apparent immediately. So always feel free to ask about anything. If someone
+isn't kind in their response, they don't belong into this project, and in 99 %
+of the cases, you'll get a kind reply from someone else.
+
+Remember: You're not the first to feel this way (and even the most experienced
+of developers sometimes have to ask someone else to find out they've forgotten
+to hit **Compile** :wink:)
+
+<!-- ## See also -->
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->

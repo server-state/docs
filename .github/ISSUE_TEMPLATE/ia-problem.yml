@@ -1,0 +1,34 @@
+name: Structure / Information Architechture problem
+description: Reporting difficult to find pages and unintuitive structure
+title: 'IA Issue: '
+labels:
+  - 'bug'
+  - 'information-architecture'
+body:
+  - type: textarea
+    attributes:
+      label: 'Which information is difficult to find?'
+      description:
+        'Please describe (this might only be a link to the relevant page)'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 'User story'
+      description:
+        'Please describe a user story where you find the current structure
+        unintuitive / the resources difficult to find'
+      placeholder: 'As X, I would like to learn about Y to do Z'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 'Where would you expect to find this information (optional)?'
+      description:
+        'If you looked for this piece of information in a specific place, please
+        specify where you looked for it/would expect it to be.'
+      placeholder: 'I would have expected to find the information at ...'
+  - type: textarea
+    attributes:
+      label: 'Additional comments'
+      description: 'Whatever other context you want to provide'

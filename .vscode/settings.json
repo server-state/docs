@@ -1,0 +1,16 @@
+{
+	"conventionalCommits.scopes": [
+		"readme",
+		"ci",
+		"vscode-config",
+		"deployment",
+		"templates",
+		"stylesheet",
+		"components",
+		"docs/internal",
+		"docs/client",
+		"docs/application",
+		"docs/general",
+		"images"
+	]
+}

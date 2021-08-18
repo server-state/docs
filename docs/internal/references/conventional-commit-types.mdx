@@ -1,0 +1,185 @@
+---
+title: Conventional Commit Types
+description: Quickly find out which conventional commit type you need to use.
+---
+
+<!--
+Reference
+=========
+
+=== When to use this template:
+When you're documenting some topic so that users (e.g., ecosystem developers)
+can quickly lookup a fact. These articles typically consist of a list, a
+definition list, a table, or some other form of "quick-to-lookup" information.
+
+=== When not to use this template:
+Do not use a reference article to explain a concept. You should keep additional
+information within the reference article to a minimum so that knowledgeable users
+can quickly see the facts that are relevant to them. You can link to concepts and
+other topics to explain specific concepts, if necessary.
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Keep the amount of additional information to a minimum (focus on the facts)
+- If necessary, link to concept topics. Do not explain them in the article
+- Use a suitable form of content so that readers can quickly look up the desired
+  information (e.g., a table, a list, a diagram, or something else)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference, Image } from '/components';
+
+<!-- Short description of what information this document provides: -->
+
+This document gives you a quick way to determine the correct conventional commit
+type for your change.
+
+## Diagram
+
+<Image
+	src="/static/img/drawio-diagrams/conventional-commits/conventional-commits-decision-table.drawio.svg"
+	invertable
+/>
+
+## Table
+
+:::tip Multiple Commit Types
+
+Use the most extensive type (the highest in the table below) if a commit
+includes more than one commit type. Using the broadest type ensures correct
+versioning. For example, if a feature, as a side-effect, also fixes a bug, it's
+still a feature. If it closes an issue, please still include
+`Closes: #issue-number` in the commit's footer to signify the fix
+
+:::
+
+:::info Breaking Changes
+
+If a commit has breaking changes, you need to declare it using an exclamation
+mark (`!`) before the colon (between the type and the colon (`:`), for example,
+`fix!: Hello world`, or, if it exists, the scope and the colon, for example,
+`feat(scope)!: Hello World`). With breaking changes, you should include a
+`BREAKING CHANGE: [description]` footer describing the breaking change.
+
+:::
+
+<table id="table_fhj_gnv_vnb">
+	<thead>
+		<tr>
+			<td>
+				<i>Conventional Commit Type</i>
+			</td>
+			<td>Changelog entry</td>
+			<td>Minimum Version Bump</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>feat</code>
+			</td>
+			<td>
+				<q>Features</q>
+			</td>
+			<td>minor (major if breaking)</td>
+			<td>Newly implemented features</td>
+		</tr>
+		<tr>
+			<td>
+				<code>fix</code>
+			</td>
+			<td>
+				<q>Bug Fixes</q>
+			</td>
+			<td>patch (major if breaking)</td>
+			<td>Bug fixes</td>
+		</tr>
+		<tr>
+			<td>
+				<code>docs</code>
+			</td>
+			<td>
+				<q>Documentation Changes</q>
+			</td>
+			<td>patch</td>
+			<td>Documentation-only changes.</td>
+		</tr>
+		<tr>
+			<td>
+				<code>chore</code>
+			</td>
+			<td>n/a</td>
+			<td>patch</td>
+			<td>
+				Meta changes that don't change the actual product, but rather the build
+				system, CI configuration, repo structure, etc.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>style</code>
+			</td>
+			<td>n/a</td>
+			<td>patch</td>
+			<td>
+				Changes that only affect the code style (fixed linting issues, etc.)
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>refactor</code>
+			</td>
+			<td>n/a</td>
+			<td>patch</td>
+			<td>
+				Refactorings only causing internal changes not affecting the actual
+				behavior
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<code>perf</code>
+			</td>
+			<td>n/a</td>
+			<td>patch</td>
+			<td>Performance-only changes, not affecting the actual behavior</td>
+		</tr>
+		<tr>
+			<td>
+				<code>test</code>
+			</td>
+			<td>n/a</td>
+			<td>patch</td>
+			<td>
+				Added, removed or changed unit, integration or E2E tests. May not
+				include changes to the source code.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<!-- Content (e.g., a table, a list, a diagram, or a definition list) -->
+
+## See also
+
+<Reference to="../concepts/conventional-commits">
+	Conventional Commits Concept
+</Reference>
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->

@@ -1,29 +1,37 @@
-# Server State Project Documentation
+# Server State Docs
 
-This repository contains the documentation of the Server State project, written in DITA.
+[![CI](https://github.com/server-state/docs/actions/workflows/ci.yml/badge.svg)](https://github.com/server-state/docs/actions/workflows/ci.yml)
+[![Build and Deploy](https://github.com/server-state/docs/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/server-state/docs/actions/workflows/gh-pages.yml)
+[![Prettier Auto Fix on main](https://github.com/server-state/docs/actions/workflows/prettier-auto-fix.yml/badge.svg)](https://github.com/server-state/docs/actions/workflows/prettier-auto-fix.yml)
+[![GitHub](https://img.shields.io/github/license/server-state/docs)](LICENSE)
+[![Twitter Follow](https://img.shields.io/twitter/follow/server_state?style=social)](https://twitter.com/server_state)
 
-It contains
+This repository contains the documentation for Server State. It is
+available at https://server-state.github.io/docs.
 
-- Developer Documentation
-- End-user-documentation
-- Guides
-- etc.
+_Please note that this **does not** contain technical references for all
+Server State components. For that, please refer to the individual READMEs and other
+resources of the individual modules. Instead, this documentation focuses on more
+general documentation of Server State and how to extend it._
 
-For all the Server State sub-projects found within the [_Server State_ GitHub organization](https://github.com/server-state).
+## Writer's guide
 
-One exception to this are auto-generated docs like the ones of Type Definitions generated from the [Typescript Definition repo](https://github.com/server-state/types).
+You can find a guide for writers/contributors to the documentation at
+`src/pages/writers-guide.mdx`, or, within the built website, at
+`/writers-guide`.
 
-This repository replaces the former "specs" repository.
+Please familiarize yourself with these guidelines _before_ beginning to write
+documentation for the project.
 
-## Folders
+## Templates
 
-|Folder|Contents|
-|---|---|
-|`build-configs`|dita-ot-helper JSON config files|
-|`material/code`|Code files used in topics|
-|`material/images`|Image files used in topics|
-|`material/source`|Source files of materials, e.g., `.blend` files for 3D renderings etc.|
-|`plugins/org.dita-ot-helper.pdf`|Customizable PDF plugin (extending the pdf2 transtype)|
-|topics|DITA topics (grouped by type: `concepts`, `references`, `tasks`)|
+The `docs/_templates` folder has a few templates for the most common types of
+pages you need to write to document the project.
 
-DITA maps should get positioned in the root folder.
+These also include tips and tricks (as comments) as well as valuable snippets
+relevant to this specific type of page (e.g., tutorial)
+
+If you feel like any basic templates are lacking, please search through
+[this repository's issues](https://github.com/server-state/docs/issues)
+for a reference to this type of template. If you don't find any reference to it,
+please feel free to open an issue for it yourself.

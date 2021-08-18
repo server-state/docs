@@ -1,0 +1,27 @@
+name: Feature Request (missing/incomplete documentation)
+description:
+  Report a topic for which no documentation exists, yet or where documentation
+  is incomplete
+title: 'Feature Request (missing/incomplete docs): '
+labels:
+  - 'enhancement'
+  - 'documentation'
+body:
+  - type: checkboxes
+    attributes:
+      label: 'Type(/-s) of missing documentation'
+      options:
+        - label: 'Explanation of a concept'
+        - label: 'Tutorial for achieving a task with the Server State ecosystem'
+        - label: 'Guide that explains how to use a specific tool in more detail'
+        - label: 'Reference to quickly look something up'
+  - type: textarea
+    attributes:
+      label: 'Description of missing documentation'
+      description: 'Describe what you would like to see documented'
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 'Additional comments'
+      description: 'Whatever other context you want to provide'

@@ -1,0 +1,223 @@
+---
+title: Branch Naming Guidelines
+description:
+  Consistent branch naming conventions make it easy to navigate through branches
+---
+
+<!--
+Reference
+=========
+
+=== When to use this template:
+When you're documenting some topic so that users (e.g., ecosystem developers)
+can quickly lookup a fact. These articles typically consist of a list, a
+definition list, a table, or some other form of "quick-to-lookup" information.
+
+=== When not to use this template:
+Do not use a reference article to explain a concept. You should keep additional
+information within the reference article to a minimum so that knowledgeable users
+can quickly see the facts that are relevant to them. You can link to concepts and
+other topics to explain specific concepts, if necessary.
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Keep the amount of additional information to a minimum (focus on the facts)
+- If necessary, link to concept topics. Do not explain them in the article
+- Use a suitable form of content so that readers can quickly look up the desired
+  information (e.g., a table, a list, a diagram, or something else)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference } from '/components';
+
+<!-- Short description of what information this document provides: -->
+
+Following our branch naming convention helps to keep things consistent and also
+encourages following the conventional commit method.
+
+<!-- Content (e.g., a table, a list, a diagram, or a definition list) -->
+
+import { BranchNameCalculator } from './branch-names/BranchNameCalculator';
+
+:::tip Branch name calculator
+
+If you don't want to read through this page, you can simply use the interactive
+"branch name calculator" below :wink::
+
+<BranchNameCalculator />
+
+:::
+
+## Reading this document
+
+:::tip Reading the EBNF grammar in this document
+
+This document uses the EBNF language to describe a technical grammar for branch
+names.
+
+This is quite easy to read:
+
+- `[]` = optional
+- `{}` = repeat 0..n times
+- `<>` = element defined somewhere else
+- `"/"` = literal content `/` in the name
+- `<a> | <b>` = either `<a>` or `<b>`
+
+:::
+
+## General Structure
+
+Overall, your branch names should have the following structure:
+
+```ebnf
+<branch name> ::= [<branch ownership prefix>] <branch content> ;
+```
+
+## Branch owner prefix (optional)
+
+If you intend to work on the branch all by yourself, it's valuable to "claim
+ownership" within the branch name itself.
+
+This both shows other contributors that they shouldn't work on this branch
+without your permission and shows maintainers whom to contact about the contents
+within the branch.
+
+A branch ownership prefix consists of your GitHub username, followed by a `/`:
+
+```ebnf
+<branch ownership prefix> ::= <GitHub username> "/" ;
+```
+
+## Branch content
+
+It's essential to, as short as possible, describe the content of the branch
+(i.e., the changes it attempts to make).
+
+Within the Server State Ecosystem, we recommend using one of two ways:
+
+- an issue-based approach (cf. [Issue-based](#issue-based))
+- a conventional commit-based approach (cf.
+  [Conventional Commit based](#conventional-commit-based))
+
+```ebnf
+<branch content> ::= <issue-based> | <conventional-commit-based> ;
+```
+
+### Issue-based
+
+If an issue already discusses the details of what your branch changes, you
+should link to that issue within your branch name.
+
+When you're working on an issue, please also make sure to assign yourself to the
+issue. That way, other contributors can see that you're already working on this
+issue.
+
+```ebnf
+<issue-based> ::= "issue-" <issue number> ;
+
+<issue number> ::= <positive, whole number> ;
+```
+
+### Conventional Commit based
+
+Alternatively, you can also describe the content directly in a "conventional
+commit like" structure.
+
+:::tip
+
+Describing branch names in a way that's similar to conventional commits is
+especially helpful as it already forces you to take on the "one change per
+branch" conventional commit mindset.
+
+:::
+
+Instead of colons and scopes, we use slashes (`/`). Also, we don't care about
+breaking changes within the branch name, yet.
+
+Therefore, a conventional commit based branch description should be structured
+like this:
+
+```ebnf
+<conventional-commit-based> ::= <conv-type> "/" [<conv-scope>] <description> ;
+
+<conv-type> ::= "feat" | "fix" | "docs" | "chore" | "test" | "refactor" | "style" | "perf" ;
+<conv-scope> ::= <scope-name> "/" ;
+<description> ::= <valid-char> {<valid-char>} ;
+
+<scope-name> ::= <valid-char> {<valid-char>} ;
+
+<valid-char> ::= "a" | "b" | ... | "z" | "-" | "/" ;
+```
+
+where
+
+- `<description>` describes the actual change (e.g., `add-send-function`)
+- `<scope-name>` is a conventional commit scope present within the repository
+  (cf. repo docs/guidelines for available scope names)
+
+## Examples
+
+Since EBNF can be a little bit ... abstract, let's take a look at a few
+examples.
+
+For the following examples, we assume that your username is `@githubuser`.
+
+:::tip Example: Fixing a long-discussed issue
+
+A change has been discussed in issue `#83` for quite a while. You're
+contributing a fix on your branch.
+
+```text
+githubuser/issue-83
+```
+
+:::
+
+:::tip Example: Working on an enormous change together
+
+An extensive restructuring of the CLI is needed. This is too big to be discussed
+in a single issue and instead covers multiple issues.
+
+Multiple contributors are working on this branch.
+
+```text
+feat/cli/restructure-the-cli
+```
+
+:::
+
+:::tip Example: A minor fix
+
+You've spotted a bug in the CLI. Writing an extensive issue would cost you more
+time than just quickly changing the line yourself.
+
+You, therefore, omit opening an issue and instead commit the change immediately.
+
+```text
+githubuser/fix/cli/fix-args-parsing
+```
+
+:::
+
+## See also
+
+<Reference to="./conventional-commit-types">
+	Conventional Commit Types
+</Reference>
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->

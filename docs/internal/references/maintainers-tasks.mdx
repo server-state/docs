@@ -1,0 +1,97 @@
+---
+title: Maintainer's Tasks
+description:
+  An overview of the tasks maintainers of Server State repositories have to fulfill
+---
+
+<!--
+Reference
+=========
+
+=== When to use this template:
+When you're documenting some topic so that users (e.g., ecosystem developers)
+can quickly lookup a fact. These articles typically consist of a list, a
+definition list, a table, or some other form of "quick-to-lookup" information.
+
+=== When not to use this template:
+Do not use a reference article to explain a concept. You should keep additional
+information within the reference article to a minimum so that knowledgeable users
+can quickly see the facts that are relevant to them. You can link to concepts and
+other topics to explain specific concepts, if necessary.
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Keep the amount of additional information to a minimum (focus on the facts)
+- If necessary, link to concept topics. Do not explain them in the article
+- Use a suitable form of content so that readers can quickly look up the desired
+  information (e.g., a table, a list, a diagram, or something else)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference } from '/components';
+
+<!-- Short description of what information this document provides: -->
+
+This document provides a reference of the key tasks maintainers within the
+Server State ecosystem have to fulfill.
+
+<!-- Content (e.g., a table, a list, a diagram, or a definition list) -->
+
+## Conventional Commits
+
+Make sure that every change has a conventional commit associated with it.
+
+Having a conventional commit for every change enables our tools to automatically
+generate the release notes and the next released version. Thus, if a branch has
+valid and correct conventional commit messages, you can go ahead and merge it by
+rebasing it onto the `main` branch.
+
+Otherwise, you may have to squash and merge using a valid conventional commit
+message. In the end, the only important thing is that every change that's
+relevant for the following type of version (for example, a feature or a breaking
+change) or the next version's release notes have a valid conventional commit for
+it in the main branch.
+
+:::caution Merge commits
+
+Merge commits appear not to get used (to their full extent). Therefore, if, for
+merging a Pull Request, you need a new conventional commit message, use Squash
+and Merge
+
+:::
+
+:::tip
+
+For some contributions, it just isn't practical to have one mergeable branch per
+change. For example, refactoring might, in the process, also fix a lot of old
+issues. In that case, you can squash and merge using the "biggest" applicable
+conventional commit (for example, `feat: Big Refactoring`), while putting
+`Closes: #issuenumber` for every closed issue into the commit's footer. So even
+though fixing a bug would, initially, be a fix, the feature of an overall
+refactoring (with possibly a few breaking changes) outweighs that, and fixing a
+bug is just a side-effect.
+
+:::
+
+<Reference to="./conventional-commit-types">
+	More information regarding conventional commit types
+</Reference>
+
+<!-- ## See also -->
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->

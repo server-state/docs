@@ -1,0 +1,141 @@
+---
+title: REPLACE_WITH_TITLE
+# e.g., "Publishing messages to the event bus" or "Installing a dependency using npm"
+
+description: REPLACE_WITH_DESCRIPTION
+---
+
+<!--
+Tutorial
+========
+
+=== When to use this template:
+Use this template when you want to give a quick, step-by-step tutorial for solving a specific
+technical problem. Tutorials allow the reader to learn how to implement something within
+their projects quickly.
+
+=== When not to use this template:
+When your article focuses more on a concept/technology and is not rooted in a specific technical
+problem ("how to do XY?"), consider using a guide instead.
+
+=== Guide or Tutorial
+A tutorial provides a quick, technical "step-by-step" tutorial for a
+given problem. Thus, a guide describes less the handling of a specific problem
+and more the general interaction of the reader with a given concept.
+
+Example with npm articles:
+- "npm": (Concept, explaining what npm is)
+- "Installing a dependency with npm" (Tutorial, providing a quick tutorial to
+  solve a technical problem)
+- "Managing dependencies with npm" (Guide, including both technical knowledge, but
+  also best practices and more)
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Provide explanations for what you do, but focus on the step-by-step guide
+  without deeply explaining every technical decision and why it's best prcatice
+  to do so (you can describe best practices in a guide, a tutorial must focus on
+  keeping the "step by step" flow going)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference, Image } from '/components';
+
+<!-- Short description of what the article covers: -->
+
+In this tutorial, we write a simple Server State extension.
+
+:::info Prerequisites
+
+To complete this tutorial, you should be familiar with **TODO: REPLACE-ME**.
+
+:::
+
+## What we'll build
+
+Mollit sint aute voluptate qui consectetur consequat id laborum Lorem. Minim
+reprehenderit qui minim in mollit excepteur tempor duis ut consequat. Deserunt
+elit in eu consectetur aliquip esse sit elit culpa reprehenderit.
+
+```java title='Car.java'
+public class Car {
+  public Engine engine;
+  public int maxSpeed;
+}
+```
+
+## Step 1: Create a new file
+
+Aute aliqua reprehenderit occaecat esse excepteur sint in voluptate cillum ut
+commodo magna cupidatat. To do so, create a file within your `src/main/java`
+folder and call it `Car.java`.
+
+## Step 2: Add the basic class declaration
+
+In the new file, write the following code:
+
+```java title='Car.java'
+public class Car { }
+```
+
+## Step 3: Add an `engine` field to the `Car` class
+
+Within our class declaration, we now add a new field called `engine`, which has
+to implement the `interface Engine`:
+
+```java title='Car.java' {2}
+public class Car {
+  public Engine engine;
+}
+```
+
+Adding this field lets us define an object that implements this interface and
+then access it within a car object.
+
+## Step 4: Add a `maxSpeed` field to the `Car` class
+
+Adding the field for the car's maximum speed (which is an integer) works the
+same:
+
+```java title='Car.java' {3}
+public class Car {
+  public Engine engine;
+  public int maxSpeed;
+}
+```
+
+:::tip Integers (`int`)
+
+Integers are "whole" numbers that do not have any decimal places.
+
+:::
+
+## Next steps
+
+<!-- Short concluding sentence: -->
+
+Adipisicing sit mollit officia laborum dolor amet mollit. Sint ad nostrud nulla
+exercitation laboris Lorem nulla exercitation velit tempor magna.
+
+<!-- Links to next steps/related articles -->
+
+<Reference to="../creating-objects">
+	Creating a new <code>Car</code> object
+</Reference>
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->
