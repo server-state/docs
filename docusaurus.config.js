@@ -78,6 +78,10 @@ module.exports = {
 							href: '/internal'
 						},
 						{
+							label: 'Branding',
+							href: '/branding'
+						},
+						{
 							label: "Writer's Guide",
 							href: '/writers-guide'
 						},
@@ -124,6 +128,16 @@ module.exports = {
 				path: 'internal',
 				routeBasePath: 'internal',
 				sidebarPath: require.resolve('./sidebars-internal.js')
+				// ... other options
+			}
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'branding',
+				path: 'branding',
+				routeBasePath: 'branding',
+				sidebarPath: require.resolve('./sidebars-branding.js')
 				// ... other options
 			}
 		]

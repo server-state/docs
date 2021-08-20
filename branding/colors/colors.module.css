@@ -1,0 +1,12 @@
+.ColorWrapper {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+
+.Color {
+	padding: 1em;
+	flex-grow: 1;
+	font-family: monospace;
+	font-weight: bold;
+}

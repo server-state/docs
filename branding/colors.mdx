@@ -1,0 +1,91 @@
+---
+title: Colors
+# e.g., "Working with the Event Bus" or "Managing dependencies with npm"
+
+description: Colors used for the Server State Ecosystem
+---
+
+<!--
+Guide
+=====
+
+=== When to use this template:
+Use this template when you want to explain how to work with a specific technology/concept.
+
+=== When not to use this template:
+When
+- the article provides a quick explanation of a single concept (use a concept instead)
+- the article should be a quick way to look things up (use a reference instead)
+- the article focuses on how to solve a particular technical problem (use a tutorial instead)
+
+=== Guide or Tutorial
+A tutorial provides a quick, technical "step-by-step" tutorial for a
+given problem. Thus, a guide describes less the handling of a specific problem
+and more the general interaction of the reader with a given concept.
+
+Example with npm articles:
+- "npm": (Concept, explaining what npm is)
+- "Installing a dependency with npm" (Tutorial, providing a quick tutorial to
+  solve a technical problem)
+- "Managing dependencies with npm" (Guide, including both technical knowledge, but
+  also best practices and more)
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Guides are more comprehensive than many other article types.
+  Feel free to add context and best practices.
+- Mention common pitfalls and how not to use something (and why)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference, Image } from '/components';
+import { Colors } from './colors/Colors';
+
+The Server State brand primarily uses shades of white and gray and one accent
+color. Neutral colors symbolize the diversity of the ecosystem, which doesn’t
+lead in one direction but instead adapts to the client’s servers:
+
+## Brand colors
+
+<Colors
+	colors={[
+		{ hex: '#FFC107', text: '#000' },
+		{ hex: '#FFFFFF', text: '#000' },
+		{ hex: '#E6E6E6', text: '#000' },
+		{ hex: '#808080', text: '#FFF' },
+		{ hex: '#232323', text: '#FFF' },
+		{ hex: '#000000', text: '#FFF' }
+	]}
+/>
+
+## Category Colors
+
+Used in graphics to differentiate categories
+
+<Colors
+	colors={[
+		{ hex: '#FFC107', text: '#000' },
+		{ hex: '#C1FF07', text: '#000' },
+		{ hex: '#07FFC1', text: '#000' },
+		{ hex: '#0745FF', text: '#FFF' },
+		{ hex: '#C107FF', text: '#FFF' },
+		{ hex: '#FF0745', text: '#FFF' }
+	]}
+/>
+
+### Lighter category shades
+
+<Colors
+	colors={[
+		{ hex: '#FFEDB8', text: '#000' },
+		{ hex: '#F2FFCB', text: '#000' },
+		{ hex: '#CBFFF2', text: '#000' },
+		{ hex: '#CBD8FF', text: '#000' },
+		{ hex: '#EDB8FF', text: '#000' },
+		{ hex: '#FFB8C9', text: '#000' }
+	]}
+/>

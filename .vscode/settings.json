@@ -11,7 +11,8 @@
 		"docs/client",
 		"docs/application",
 		"docs/general",
-		"images"
+		"images",
+		"docs/branding"
 	],
 	"hediet.vscode-drawio.customColorSchemes": [
 		[
