@@ -12,5 +12,25 @@
 		"docs/application",
 		"docs/general",
 		"images"
+	],
+	"hediet.vscode-drawio.customColorSchemes": [
+		[
+			{ "fill": "white", "stroke": "black" },
+			{ "fill": "#FFC107", "stroke": "black" },
+			{ "fill": "#C1FF07", "stroke": "black" },
+			{ "fill": "#07FFC1", "stroke": "black" },
+			{ "fill": "#0745FF", "stroke": "black", "font": "white" },
+			{ "fill": "#C107FF", "stroke": "black", "font": "white" },
+			{ "fill": "#FF0745", "stroke": "black", "font": "white" }
+		],
+		[
+			{ "fill": "white", "stroke": "black" },
+			{ "fill": "#FFEDB8", "stroke": "black" },
+			{ "fill": "#F2FFCB", "stroke": "black" },
+			{ "fill": "#CBFFF2", "stroke": "black" },
+			{ "fill": "#CBD8FF", "stroke": "black" },
+			{ "fill": "#EDB8FF", "stroke": "black" },
+			{ "fill": "#FFB8C9", "stroke": "black" }
+		]
 	]
 }
