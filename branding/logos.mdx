@@ -77,8 +77,8 @@ In most cases, you should use one of our colored logos:
 
 ### Monochrome Logos
 
-Use the monochrome logos if the Server State logo doesn't match your intended
-color schema, but you still want to include the logo.
+Use the monochrome logos if the Server State Logo doesn't match your intended
+color schema, but you still want to include the Logo.
 
 <Grid>
 	<div style={{ background: '#e3e3e3', color: '#232323', padding: '1em' }}>
@@ -129,3 +129,69 @@ than two values**.
 		Stencil (white on black)
 	</FileDownload>
 </Grid>
+
+## Logo design
+
+Server State has three main types of logos:
+
+- the brand (Server State) logo described above
+- product logos, e.g., for the Web Client
+- module logos for individual modules
+
+There are requirements all these logos need to fulfill:
+
+- they have to work in a square and a circle (and all in-between states)
+- they have to work in multiple color environments:
+  - Color (light and dark backgrounds)
+  - Monochrome (light and dark backgrounds)
+  - Stencil, i.e., in two values: "Black" and "White."
+
+### The grid system
+
+To keep sizing consistent throughout logos, we use a grid system when designing
+them.
+
+Since we create logos as vector files, absolute sizes aren't a good measure for
+dimensions.
+
+To get around this, we define our artboard as having the width and height x and
+define all other units around that.
+
+The basic shape of the Logo should get designed with a grid of 12 rows and
+columns with no margin, i.e., each cell having the width and height `x/12`, to
+add finer details, it's possible to later subdivide this into 24 sections with a
+width/height of `x/24`:
+
+<Grid>
+	<div>
+		<h4>Base grid with 12 rows and columns</h4>
+		<Image alt="12 * 12 grid on a square with a circle marked" src="/static/branding/assets/logo-design/grid.svg" />
+	</div>
+	<div>
+		<h4>Subdivided grid with 24 rows and columns</h4>
+		<Image alt="24 * 24 grid on a square with a circle marked" src="/static/branding/assets/logo-design/grid-subdivided.svg" />
+	</div>
+
+</Grid>
+
+### Color usage
+
+We want to create a good contrast with our logos. We use the colors White,
+Light, Dark, and Black (cf. [Colors](./colors)) to achieve this. In addition, to
+make the Logo recognizable as part of our brand, we add a small amount of the
+Accent color.
+
+### The outline
+
+To add more contrast to the background within transparent logos, we add an
+outline with a stroke width of `x/24` in a color that contrasts the presumed
+background-color (i.e., Black for light backgrounds and White for dark
+backgrounds) to the Logo's primary shape. This stroke, e.g., gets used in the
+Server State logo, as you can see above.
+
+### Template
+
+To make the logo design process more accessible, we provide a template XD file
+for creating Server State logos:
+
+<FileDownload file="/static/branding/assets/logo-design/logo-template.xd">XD Logo Design Template</FileDownload>
