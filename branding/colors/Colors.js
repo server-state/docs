@@ -10,7 +10,7 @@ export function Colors({ colors }) {
 					className={styles.Color}
 					style={{
 						background: color.hex,
-						color: color.text,
+						color: color.text
 					}}
 				>
 					{color.hex}
