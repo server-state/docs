@@ -12,7 +12,8 @@
 		"docs/application",
 		"docs/general",
 		"images",
-		"docs/branding"
+		"docs/branding",
+		"build"
 	],
 	"hediet.vscode-drawio.customColorSchemes": [
 		[
