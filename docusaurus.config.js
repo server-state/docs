@@ -75,11 +75,11 @@ module.exports = {
 					items: [
 						{
 							label: 'Internal documentation',
-							href: '/internal'
+							href: '/internal/'
 						},
 						{
 							label: 'Branding',
-							href: '/branding'
+							href: '/branding/'
 						},
 						{
 							label: "Writer's Guide",
