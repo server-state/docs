@@ -14,7 +14,22 @@
 	color: black;
 }
 
+.row {
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+
+.inverted {
+	color: black;
+	padding: 0;
+}
+
 @media screen and (max-width: 966px) {
+	.row {
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
 	.heroBanner {
 		padding: 2rem;
 	}
