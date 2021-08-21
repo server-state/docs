@@ -6,8 +6,10 @@
 [![GitHub](https://img.shields.io/github/license/server-state/docs)](LICENSE)
 [![Twitter Follow](https://img.shields.io/twitter/follow/server_state?style=social)](https://twitter.com/server_state)
 
+[![Banner with Server State logo](static/img/banners/banner-1.jpg)](https://www.server-state.tech)
+
 This repository contains the documentation for Server State. It is available at
-https://server-state.github.io/docs.
+https://www.server-state.tech.
 
 _Please note that this **does not** contain technical references for all Server
 State components. For that, please refer to the individual READMEs and other
