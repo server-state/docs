@@ -21,7 +21,10 @@ function HomepageHeader() {
 					</div>
 				</div>
 			</header>
-			<Image src="/static/img/waves/accent-above-1.svg" className="waves bottom" />
+			<Image
+				src="/static/img/waves/accent-above-1.svg"
+				className="waves bottom"
+			/>
 		</>
 	);
 }
@@ -135,7 +138,10 @@ function EasyToDevelopFor() {
 					</div>
 				</div>
 			</div>
-			<Image src="/static/img/waves/accent-above-3.svg" className="waves bottom" />
+			<Image
+				src="/static/img/waves/accent-above-3.svg"
+				className="waves bottom"
+			/>
 		</>
 	);
 }
