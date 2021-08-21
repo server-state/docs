@@ -92,7 +92,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 html[data-theme='dark'] img.invertible {
-	filter: invert(1);
+	filter: invert(1) hue-rotate(180deg) brightness(2);
 }
 
 .block-link {
