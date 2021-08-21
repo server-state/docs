@@ -145,7 +145,9 @@ module.exports = {
 				path: 'develop',
 				routeBasePath: 'develop',
 				sidebarPath: require.resolve('./sidebars-develop.js'),
-				editUrl: 'https://github.com/server-state/docs/edit/main/'
+				editUrl: 'https://github.com/server-state/docs/edit/main/',
+				showLastUpdateTime: true,
+				showLastUpdateAuthor: true
 				// ... other options
 			}
 		],
@@ -156,7 +158,9 @@ module.exports = {
 				path: 'internal',
 				routeBasePath: 'internal',
 				sidebarPath: require.resolve('./sidebars-internal.js'),
-				editUrl: 'https://github.com/server-state/docs/edit/main/'
+				editUrl: 'https://github.com/server-state/docs/edit/main/',
+				showLastUpdateTime: true,
+				showLastUpdateAuthor: true
 				// ... other options
 			}
 		],
@@ -167,7 +171,9 @@ module.exports = {
 				path: 'branding',
 				routeBasePath: 'branding',
 				sidebarPath: require.resolve('./sidebars-branding.js'),
-				editUrl: 'https://github.com/server-state/docs/edit/main/'
+				editUrl: 'https://github.com/server-state/docs/edit/main/',
+				showLastUpdateTime: true,
+				showLastUpdateAuthor: true
 				// ... other options
 			}
 		]
@@ -181,7 +187,9 @@ module.exports = {
 
 					routeBasePath: '/docs',
 					// Please change this to your repo.
-					editUrl: 'https://github.com/server-state/docs/edit/main'
+					editUrl: 'https://github.com/server-state/docs/edit/main',
+					showLastUpdateTime: true,
+					showLastUpdateAuthor: true
 				},
 				blog: false,
 				theme: {
