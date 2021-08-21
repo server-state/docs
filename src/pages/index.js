@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import {Image} from '/components';
 import styles from './index.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
@@ -20,7 +21,7 @@ function HomepageHeader() {
 					</div>
 				</div>
 			</header>
-			<img src="/static/img/waves/accent-above-1.svg" className="waves" />
+			<Image src="/static/img/waves/accent-above-1.svg" className="waves" />
 		</>
 	);
 }
@@ -79,7 +80,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 function EasyToDevelopFor() {
 	return (
 		<>
-			<img src="/static/img/waves/accent-below-1.svg" className="waves" />
+			<Image src="/static/img/waves/accent-below-1.svg" className="waves" />
 			<div className={clsx('hero hero--primary', styles.inverted)}>
 				<div className="container">
 					<div className="row">
@@ -134,7 +135,7 @@ function EasyToDevelopFor() {
 					</div>
 				</div>
 			</div>
-			<img src="/static/img/waves/accent-above-3.svg" className="waves" />
+			<Image src="/static/img/waves/accent-above-3.svg" className="waves" />
 		</>
 	);
 }
