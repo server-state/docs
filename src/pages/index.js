@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import {Image} from '/components';
+import { Image } from '/components';
 import styles from './index.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
