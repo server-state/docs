@@ -8,6 +8,7 @@ module.exports = {
 		'A NodeJS and React-based ecosystem to inspect the state of your servers.',
 	url: 'https://www.server-state.tech/',
 	baseUrl: '/',
+	noIndex: true, // TODO: Allow indexing once ready
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'img/favicon.ico',
