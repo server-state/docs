@@ -43,24 +43,29 @@ function ProductOverview() {
 					<div className="padding-bottom-lg">
 						<h3>✔ Extensible</h3>
 						<p>
-							Lorem ipsum dolor sit amet, sed diam nonumy eirmod tempor invidunt
-							ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos
+							We build Server State with extensibility as a first-class citizen.
+							We even create many built-in functions as plugins. Want another
+							notification style? Just install the plugin. Or, if no plugin
+							exists yet, build it using our well-documented APIs.
 						</p>
 					</div>
 					<div className="padding-bottom-lg">
 						<h3>✔ Adjustable</h3>
 						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-							nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-							erat, sed diam voluptua. At vero eos
+							Even if you are not a developer yourself, it's easy to adjust
+							Server State to fit your needs. Whether it's by installing an
+							additional plugin, re-configuring installed plugins, or something
+							else: You can let Server State be the right tool for the job.
 						</p>
 					</div>
 					<div className="padding-bottom-lg">
 						<h3>✔ Easy to set up</h3>
 						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-							nonumy eirmod tempor invidunt ut labore et dolora. At vero eos
+							Installing Server State on your server is a simple as running an
+							installer script. (ok, sometimes you'll need to adjust the
+							Firewall a little bit, but in that case, you should know what to
+							do 😉). After that, you can do configure everything through our
+							UI.
 						</p>
 					</div>
 				</div>
@@ -88,34 +93,43 @@ function EasyToDevelopFor() {
 							image={useBaseUrl('/img/icons/embed-code.svg')}
 						>
 							<p>
-								We're using industry standards like NodeJS, React &amp; GraphQL
-								for Server State.
+								We're using industry standards like NodeJS, React & GraphQL for
+								Server State.
 							</p>
 							<p>
-								This means that both you and we ourselves can use a lot of
-								tooling that already exists for these standards wihtout having
-								to reinvent the wheel.
+								Server State using standard tech means that both you and we can
+								use a lot of tooling that already exists for these standards
+								without reinventing the wheel.
 							</p>
 						</Highlight>
 						<Highlight
 							title="Well documented"
 							image={useBaseUrl('/img/icons/pencil.svg')}
 						>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, facere nulla exercitationem aliquam optio dolorum
-							dolorem totam! Quaerat repudiandae voluptates, voluptate
-							reprehenderit aut facere asperiores aperiam assumenda? Vero,
-							soluta ea.
+							<p>
+								As developers, we know that one of the biggest frustrations when
+								integrating into a system is lacking/inaccurate documentation.
+							</p>
+							<p>
+								For that reason, we{' '}
+								<strong>
+									don't consider documentation to be a "side artifact" but an
+									integral part of the product itself
+								</strong>
+								.
+							</p>
 						</Highlight>
 						<Highlight
 							title="Eating our own dogfood"
 							image={useBaseUrl('/img/icons/paw.svg')}
 						>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-							Provident, facere nulla exercitationem aliquam optio dolorum
-							dolorem totam! Quaerat repudiandae voluptates, voluptate
-							reprehenderit aut facere asperiores aperiam assumenda? Vero,
-							soluta ea.
+							"Eating one's own dog food" refers to using one's products. Since
+							we build much of our functionality using the plugin APIs
+							ourselves,{' '}
+							<strong>
+								we want road bumps within our APIs fixed just as much as you do
+							</strong>
+							.
 						</Highlight>
 					</div>
 				</div>
@@ -133,10 +147,10 @@ function OpenSource() {
 				<div className="col col--6">
 					<h2>100 % Open Source</h2>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-						Voluptatibus inventore accusantium facere eius odio ea optio, dolore
-						facilis. Cumque earum fugit unde enim minus vel tempora nulla
-						accusantium ex culpa.
+						Server State and its core modules are fully open source (under the
+						MIT license) and free to use even in commercial settings. If you
+						want to support us, we appreciate all kinds of contributions to our
+						project on GitHub:
 					</p>
 					<div className={styles.buttons}>
 						<Link
@@ -157,8 +171,8 @@ export default function Home() {
 	const { siteConfig } = useDocusaurusContext();
 	return (
 		<Layout
-			title={`Hello from ${siteConfig.title}`}
-			description="Description will go into a meta tag in <head />"
+			title={`Hello from ${siteConfig.title}, an open source Server Monitoring solution`}
+			description="A free, modular, extensible, open source solution for server monitoring"
 		>
 			<HomepageHeader />
 			<ProductOverview />
