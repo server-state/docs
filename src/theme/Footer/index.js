@@ -66,7 +66,7 @@ function Footer() {
 					light: useBaseUrl('/img/waves/accent-below-4.svg'),
 					dark: useBaseUrl('/img/waves/accent-below-4-dark.svg')
 				}}
-				className="waves"
+				className="waves top"
 			/>
 			<footer
 				className={clsx('footer', {

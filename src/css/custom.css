@@ -129,9 +129,19 @@ html[data-theme='dark'] img.invertible {
 img.waves {
 	display: block;
 	width: 100%;
-	height: 72px;
+	min-height: 72px;
 
 	object-fit: cover;
+}
+
+img.waves.top {
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+img.waves.bottom {
+	margin-top: -5px;
+	margin-bottom: 5px;
 }
 
 .center {

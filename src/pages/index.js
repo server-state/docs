@@ -21,7 +21,7 @@ function HomepageHeader() {
 					</div>
 				</div>
 			</header>
-			<Image src="/static/img/waves/accent-above-1.svg" className="waves" />
+			<Image src="/static/img/waves/accent-above-1.svg" className="waves bottom" />
 		</>
 	);
 }
@@ -80,7 +80,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 function EasyToDevelopFor() {
 	return (
 		<>
-			<Image src="/static/img/waves/accent-below-1.svg" className="waves" />
+			<Image src="/static/img/waves/accent-below-1.svg" className="waves top" />
 			<div className={clsx('hero hero--primary', styles.inverted)}>
 				<div className="container">
 					<div className="row">
@@ -135,7 +135,7 @@ function EasyToDevelopFor() {
 					</div>
 				</div>
 			</div>
-			<Image src="/static/img/waves/accent-above-3.svg" className="waves" />
+			<Image src="/static/img/waves/accent-above-3.svg" className="waves bottom" />
 		</>
 	);
 }
