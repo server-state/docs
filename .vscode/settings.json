@@ -14,7 +14,8 @@
 		"images",
 		"docs/branding",
 		"build",
-		"docs/develop"
+		"docs/develop",
+		"footer"
 	],
 	"hediet.vscode-drawio.customColorSchemes": [
 		[

@@ -53,11 +53,11 @@ module.exports = {
 						},
 						{
 							label: 'User Documentation',
-							to: '/docs'
+							to: '/docs/'
 						},
 						{
 							label: 'Developer Documentation',
-							to: '/develop'
+							to: '/develop/'
 						},
 						// {
 						// 	label: 'Development Blog',
