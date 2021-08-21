@@ -61,10 +61,13 @@ function Footer() {
 
 	return (
 		<>
-			<ThemedImage sources={{
-				light: useBaseUrl('/img/waves/accent-below-4.svg'),
-				dark: useBaseUrl('/img/waves/accent-below-4-dark.svg')
-			}} className="waves" />
+			<ThemedImage
+				sources={{
+					light: useBaseUrl('/img/waves/accent-below-4.svg'),
+					dark: useBaseUrl('/img/waves/accent-below-4-dark.svg')
+				}}
+				className="waves"
+			/>
 			<footer
 				className={clsx('footer', {
 					'footer--dark': footer.style === 'dark'
