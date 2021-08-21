@@ -22,10 +22,22 @@ module.exports = {
 			},
 			items: [
 				{
+					href: '/',
+					position: 'left',
+					label: 'Home'
+				},
+				{
 					type: 'doc',
 					docId: 'intro',
 					position: 'left',
 					label: 'Documentation'
+				},
+				{
+					type: 'doc',
+					docId: 'intro',
+					docsPluginId: 'develop',
+					position: 'left',
+					label: 'Developer Documentation'
 				}
 			]
 		},
@@ -40,8 +52,12 @@ module.exports = {
 							href: '/'
 						},
 						{
-							label: 'Project Documentation',
+							label: 'User Documentation',
 							to: '/docs'
+						},
+						{
+							label: 'Developer Documentation',
+							to: '/develop'
 						},
 						// {
 						// 	label: 'Development Blog',
@@ -124,10 +140,22 @@ module.exports = {
 		[
 			'@docusaurus/plugin-content-docs',
 			{
+				id: 'develop',
+				path: 'develop',
+				routeBasePath: 'develop',
+				sidebarPath: require.resolve('./sidebars-develop.js'),
+				editUrl: 'https://github.com/server-state/docs/edit/main/'
+				// ... other options
+			}
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
 				id: 'internal',
 				path: 'internal',
 				routeBasePath: 'internal',
-				sidebarPath: require.resolve('./sidebars-internal.js')
+				sidebarPath: require.resolve('./sidebars-internal.js'),
+				editUrl: 'https://github.com/server-state/docs/edit/main/'
 				// ... other options
 			}
 		],
@@ -137,7 +165,8 @@ module.exports = {
 				id: 'branding',
 				path: 'branding',
 				routeBasePath: 'branding',
-				sidebarPath: require.resolve('./sidebars-branding.js')
+				sidebarPath: require.resolve('./sidebars-branding.js'),
+				editUrl: 'https://github.com/server-state/docs/edit/main/'
 				// ... other options
 			}
 		]
