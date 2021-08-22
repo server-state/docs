@@ -129,6 +129,14 @@ module.exports = {
 			respectPrefersColorScheme: true
 		}
 	},
+	scripts: [
+		{
+			src: 'https://analytics.server-state.tech/js/plausible.outbound-links.js',
+			async: true,
+			defer: true,
+			'data-domain': 'server-state.tech'
+		}
+	],
 	clientModules: [],
 	plugins: [
 		[
