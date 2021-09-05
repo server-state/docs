@@ -6,7 +6,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "npm run update:automated && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -14,7 +14,9 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "prettier:fix": "prettier --write .",
-    "prettier:check": "prettier --check ."
+    "prettier:check": "prettier --check .",
+    "update:automated": "npm run update:schema-docs && npm run prettier:fix",
+    "update:schema-docs": "graphql-markdown.cmd --no-toc --no-title --update-file ./develop/references/graphql-base-schema.md ./develop/references/schema.graphql"
   },
   "dependencies": {
     "@cmfcmf/docusaurus-search-local": "^0.6.6",
@@ -43,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "graphql-markdown": "^6.0.0",
     "prettier": "^2.3.2"
   }
 }

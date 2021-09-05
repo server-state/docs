@@ -1,0 +1,6 @@
+// Copyright (c) 2021 fliegwerk
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+TODO: Download schema from server repo as soon as it's included there

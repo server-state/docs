@@ -1,0 +1,74 @@
+type Query {
+	"""
+	The APIs for inspecting the server state.
+
+	This is the core of the Server State ecosystem and what most plugins will interact with.
+	"""
+	serverState: ServerState!
+
+	"""
+	The currently authenticated user, if any
+	"""
+	me: User
+}
+
+"""
+A `JSONSerializable` value represented as its serialized JSON string.
+"""
+scalar JSON
+
+"""
+The ServerState type that represents every query about the server state.
+
+Extensions may extend this type with a property identical to their own ID to add additional "query-able" parameters.
+
+For example (with a plugin id of `ABCDEF`):
+
+```graphql
+extend type ServerState {
+    ABCDEF: ABCDEF_State
+}
+
+type ABCDEF_State {
+    randomNumber: Int
+}
+```
+"""
+type ServerState {
+	"""
+	The timestamp of the query's execution
+	"""
+	timestamp: Int
+}
+
+"""
+An object representing a single user
+"""
+type User {
+	"""
+	The user's unique ID
+	"""
+	id: ID!
+	"""
+	The user's email address
+	"""
+	email: String!
+	"""
+	The user's role within the system
+	"""
+	role: UserRole
+}
+
+"""
+A user's role. This defines the user's privileges within the system.
+"""
+enum UserRole {
+	"""
+	An admin user with additional privileges (like managing other user accounts and installing extensions)
+	"""
+	admin
+	"""
+	A "normal" user without any special privileges
+	"""
+	user
+}
