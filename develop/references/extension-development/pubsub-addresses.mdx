@@ -1,0 +1,170 @@
+---
+title: Pub/Sub Addresses
+description: An overview of all the standardized event bus addresses
+---
+
+<!--
+Reference
+=========
+
+=== When to use this template:
+When you're documenting some topic so that users (e.g., ecosystem developers)
+can quickly lookup a fact. These articles typically consist of a list, a
+definition list, a table, or some other form of "quick-to-lookup" information.
+
+=== When not to use this template:
+Do not use a reference article to explain a concept. You should keep additional
+information within the reference article to a minimum so that knowledgeable users
+can quickly see the facts that are relevant to them. You can link to concepts and
+other topics to explain specific concepts, if necessary.
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Keep the amount of additional information to a minimum (focus on the facts)
+- If necessary, link to concept topics. Do not explain them in the article
+- Use a suitable form of content so that readers can quickly look up the desired
+  information (e.g., a table, a list, a diagram, or something else)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference, Image } from '/components';
+
+<!-- Short description of what information this document provides: -->
+
+Server State extensions have access to various `publish`/`subscribe` methods to
+trigger and listen for common occurrences within the Server State server.
+
+Handling such events via a Pub/Sub system allows us to handle things like
+logging with interchangeable plugins instead of attempting to find a "one size
+fits all" solution that doesn't exist.
+
+<!-- Content (e.g., a table, a list, a diagram, or a definition list) -->
+
+## Addresses
+
+### Logging (`_LOG/`)
+
+Logging resides within the `_LOG/*` address space.
+
+As a payload, you can pass an array of any JSON-serializable value, but strings
+are preferred, if possible.
+
+#### `_LOG/DEBUG`
+
+**Expected payload:** `JSONSerializable[]`
+
+For logging debug messages.
+
+#### `_LOG/INFO`
+
+**Expected payload:** `JSONSerializable[]`
+
+For logging informative messages.
+
+#### `_LOG/WARN`
+
+**Expected payload:** `JSONSerializable[]`
+
+For logging warnings.
+
+#### `_LOG/ERROR`
+
+**Expected payload:** `JSONSerializable[]`
+
+For logging error messages.
+
+### Notifications (`_NOTIFY/`)
+
+Notifying a user/admin about an occurance is a common task. Server State
+provides a standardized interface so that users can configure Server State to
+notify them via a platform of their choice.
+
+:::tip Time-critical notifications
+
+Every address within the notifications namespace `_NOTIFY` also has a "critical"
+version with a `/critical` appendix.
+
+"Critical" notifications should be seen as a sub-category, i.e., an extension
+listening for all notifications should also include critical notifications.
+
+Non-critical notifications don't require immediate attention and can, therefore,
+be sent as a digest at a later time.
+
+Critical notifications, on the other hand, should get sent to their target
+audience as soon as possible.
+
+:::
+
+#### `_NOTIFY/general`
+
+**Expected payload:** `string`
+
+For notifying all users about an event. **Not for time-critical notifications!**
+
+#### `_NOTIFY/general/critical`
+
+**Expected payload:** `string`
+
+Critical variant of [`_NOTIFY/general`](#_notifygeneral)
+
+#### `_NOTIFY/admin`
+
+**Expected payload:** `string`
+
+For notifying admins about an event. **Not for time-critical notifications!**
+
+#### `_NOTIFY/admin/critical`
+
+**Expected payload:** `string`
+
+Critical variant of [`_NOTIFY/admin`](#_notifyadmin)
+
+## Custom Message Addresses
+
+With a few exceptions, addresses are "open" to everyone.
+
+Therefore, if your extension needs custom addresses, you can use any address
+name, even if it's not pre-defined.
+
+:::caution Reserved addresses
+
+Your extension may not define its own `_`-prefixed addresses.
+
+Apart from that, there are no "hard" restrictions.
+
+:::
+
+**To avoid address naming conflicts**, we strongly suggest prefixing
+extension-specific addresses with `EXTENSIONID/`.
+
+Thus, if, for example, your extension was `ABCDEF`, your address names should
+match the following pattern:
+
+```text title="Name pattern for plugin ABCDEF"
+ABCDEF/*
+```
+
+:::info
+
+We enforce this convention for officially recommended extensions.
+
+:::
+
+<!-- ## See also -->
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->
