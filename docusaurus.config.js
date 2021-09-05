@@ -184,6 +184,19 @@ module.exports = {
 				showLastUpdateAuthor: true
 				// ... other options
 			}
+		],
+		[
+			'docusaurus-plugin-typedoc',
+			// Plugin / TypeDoc options
+			{
+				entryPoints: ['./node_modules/@server-state/types/types/index.d.ts'],
+				tsconfig: './tsconfig.json',
+				docsRoot: 'develop',
+				sidebar: {
+					categoryLabel: 'Types API Reference'
+				},
+				out: 'types-api-reference'
+			}
 		]
 	],
 	presets: [
