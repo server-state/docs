@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/server-state/docs/compare/v0.2.0...v0.3.0) (2021-09-10)
+
+
+### Features
+
+* **docs/develop:** :construction: Add GraphQL Base Schema Reference (WIP!) ([d7a9697](https://www.github.com/server-state/docs/commit/d7a96972dcf9d5c4aba1e008e15505317993e74d))
+* **docs/develop:** :sparkles: Add pub/sub address reference ([1b5f2a1](https://www.github.com/server-state/docs/commit/1b5f2a18fae06c5d8f13812a3648d106c2d13fa5))
+
+
+### Bug Fixes
+
+* :green_heart: Fix `update:schema-docs` script for non-Windows systems ([25a5776](https://www.github.com/server-state/docs/commit/25a5776a4218da331108954a3fbb24fe97692aa4))
+
 ## 0.2.0 (2021-08-31)
 
 
