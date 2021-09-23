@@ -1,0 +1,93 @@
+---
+title: Redis-based User Database Structure
+description:
+  Overview of how we use the Redis key-value storage to store user data.
+---
+
+<!--
+Reference
+=========
+
+=== When to use this template:
+When you're documenting some topic so that users (e.g., ecosystem developers)
+can quickly lookup a fact. These articles typically consist of a list, a
+definition list, a table, or some other form of "quick-to-lookup" information.
+
+=== When not to use this template:
+Do not use a reference article to explain a concept. You should keep additional
+information within the reference article to a minimum so that knowledgeable users
+can quickly see the facts that are relevant to them. You can link to concepts and
+other topics to explain specific concepts, if necessary.
+
+=== Writing tips:
+- Write in the present tense
+- Use neutral pronouns (they/them instead of he/she and him/her)
+- Be respectful to everyone
+- Be aware of the potential for cultural misunderstandings
+- Keep the amount of additional information to a minimum (focus on the facts)
+- If necessary, link to concept topics. Do not explain them in the article
+- Use a suitable form of content so that readers can quickly look up the desired
+  information (e.g., a table, a list, a diagram, or something else)
+-->
+
+<!-- Relevant imports: -->
+
+import { Reference, Image } from '/components';
+
+<!-- Short description of what information this document provides: -->
+
+We use a simple set of key-value pairs to store any individual user.
+
+Any user has
+
+- an id
+- an email address
+- a role (either `'user'` or `'admin'`)
+- a password (saved as a hash)
+
+ID, email and role are accessible under `_USERS/[id]/*` and the id can be
+"reverse looked up" based on the email via `_USER_EMAILS/[email]`:
+
+<Image
+	src="/static/img/drawio-diagrams/internal/redis-user-db-structure.drawio.svg"
+	invertible
+/>
+
+This way, it's possible to perform all CRUD user operations with four Redis
+commands:
+
+- `SET [key] [value]` - set or add some values
+- `GET [key]` - get some values
+- `DEL [key]` - delete values
+- `KEYS [pattern]` - lookup all keys that match the `[pattern]`
+
+:::tip List of users
+
+The only thing that may seem difficult with this key-value based storage, at
+first, is listing all users. But we can easily achieve this using the `KEYS`
+command:
+
+```js
+const raw = await references.redisConn.client.KEYS('_USERS/*/email');
+
+const userIds = raw.map(s => s.split('/')[1]);
+```
+
+:::
+
+<!-- Content (e.g., a table, a list, a diagram, or a definition list) -->
+
+## See also
+
+<!--
+Snippets
+--------
+
+<Reference to="../other-article">
+    Relative Link to other article
+</Reference>
+
+<Reference to="https://www.example.com">
+    Example Website
+</Reference>
+-->
