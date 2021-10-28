@@ -45,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "graphql": "^15.6.0",
+    "graphql": "^15.7.1",
     "graphql-markdown": "^6.0.0",
     "prettier": "^2.4.1"
   }
