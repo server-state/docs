@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/server-state/docs/compare/v0.3.0...v0.4.0) (2021-12-03)
+
+
+### Features
+
+* **docs/develop:** :memo: Update GraphQL Schema docs in accordance with changes from https://github.com/server-state/server/pull/14 ([d85eb23](https://www.github.com/server-state/docs/commit/d85eb23cf8e8a40e9f017ca1009ccebceb5374bc))
+* **docs/internal:** :memo: Add Redis User DB structure reference ([5d61230](https://www.github.com/server-state/docs/commit/5d61230141e486e85caecf0f570bc0e20fc0f9e3))
+
 ## [0.3.0](https://www.github.com/server-state/docs/compare/v0.2.0...v0.3.0) (2021-09-10)
 
 
