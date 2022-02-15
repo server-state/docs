@@ -74,8 +74,8 @@ module.exports = {
 					title: 'Community',
 					items: [
 						{
-							label: 'Forum',
-							href: 'https://forums.server-state.tech/'
+							label: 'Discord',
+							href: 'https://discord.gg/NrT9HMCJgt'
 						},
 						{
 							label: 'Twitter',
