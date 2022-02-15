@@ -138,12 +138,6 @@ module.exports = {
 	clientModules: [],
 	plugins: [
 		[
-			require.resolve('@cmfcmf/docusaurus-search-local'),
-			{
-				indexBlog: false
-			}
-		],
-		[
 			'@docusaurus/plugin-content-docs',
 			{
 				id: 'develop',
