@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.0](https://github.com/server-state/docs/compare/v0.3.0...v0.4.0) (2022-02-15)
+
+
+### Features
+
+* **docs/develop:** :memo: Update GraphQL Schema docs in accordance with changes from https://github.com/server-state/server/pull/14 ([d85eb23](https://github.com/server-state/docs/commit/d85eb23cf8e8a40e9f017ca1009ccebceb5374bc))
+* **docs/internal:** :memo: Add Redis User DB structure reference ([5d61230](https://github.com/server-state/docs/commit/5d61230141e486e85caecf0f570bc0e20fc0f9e3))
+* Replace old forums link with Discord link ([0913c54](https://github.com/server-state/docs/commit/0913c5415601361f958ff23c746c84c23f92c983))
+
+
+### Bug Fixes
+
+* **deployment:** Remove non-working search for now ([bd14814](https://github.com/server-state/docs/commit/bd14814cde594a023472518a6b76cc26b0f1bdbb))
+
 ## [0.3.0](https://www.github.com/server-state/docs/compare/v0.2.0...v0.3.0) (2021-09-10)
 
 
