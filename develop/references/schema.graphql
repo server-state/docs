@@ -1,7 +1,6 @@
 type Query {
 	"""
 	The APIs for inspecting the server state.
-
 	This is the core of the Server State ecosystem and what most plugins will interact with.
 	"""
 	serverState: ServerState!
@@ -13,21 +12,18 @@ type Query {
 
 	"""
 	List of all users.
-
 	**Accessible for admins only.**
 	"""
 	users: [User!]!
 
 	"""
 	Get user details based on their user id.
-
 	**Accessible for admins only.**
 	"""
 	userById("The user's ID" id: ID!): User
 
 	"""
 	Get user details based on their email address.
-
 	**Accessible for admins only.**
 	"""
 	userByEmail("The user's email address" email: String!): User
@@ -41,23 +37,19 @@ type Mutation {
 
 	"""
 	Adds a new user.
-
 	**Accessible for admins only.**
 	"""
 	addUser(user: AddUserInput!): AddUserResponse!
 
 	"""
 	Removes a user.
-
 	**Accessible for admins only.**
 	"""
 	removeUser("The user's user id" id: ID!): RemoveUserResponse!
 
 	"""
 	Edits an existing user.
-
 	Specify the user you want to edit in the `userEdits` input's `id` field.
-
 	**Accessible for admins only.**
 	"""
 	editUser(user: EditUserInput!): EditUserResponse!
@@ -69,7 +61,6 @@ The data returned by the `login` mutation.
 type LoginResponse {
 	"""
 	A JWT token for authentication.
-
 	Use the header `Authorization: Bearer [token]` in later API interactions.
 	"""
 	token: String!
@@ -116,16 +107,12 @@ scalar JSON
 
 """
 The ServerState type that represents every query about the server state.
-
 Extensions may extend this type with a property identical to their own ID to add additional "query-able" parameters.
-
 For example (with a plugin id of `ABCDEF`):
-
 ```graphql
 extend type ServerState {
 	ABCDEF: ABCDEF_State
 }
-
 type ABCDEF_State {
 	randomNumber: Int
 }
@@ -181,7 +168,6 @@ input AddUserInput {
 
 	"""
 	The new user's password.
-
 	If not specified, the new user won't be able to login until the password gets reset.
 	"""
 	password: String
