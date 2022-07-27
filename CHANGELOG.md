@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/server-state/docs/compare/v0.4.0...v0.5.0) (2022-07-27)
+
+
+### Features
+
+* Add "Coming soon" message to main docs page ([3b4e035](https://github.com/server-state/docs/commit/3b4e035ecaabd1fbc9f9dad679224903c37c38a1))
+
 ## [0.4.0](https://github.com/server-state/docs/compare/v0.3.0...v0.4.0) (2022-02-15)
 
 
