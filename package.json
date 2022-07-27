@@ -43,6 +43,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+      "node": ">=16.14"
+  },
   "devDependencies": {
     "graphql": "15.8.0",
     "graphql-markdown": "6.0.0",
