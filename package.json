@@ -1,6 +1,6 @@
 {
   "name": "@server-state/docs",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Documentation for Server State, created using Docusaurus v2",
   "private": true,
   "scripts": {
@@ -44,7 +44,7 @@
     ]
   },
   "engines": {
-      "node": ">=16.14"
+    "node": ">=16.14"
   },
   "devDependencies": {
     "graphql": "15.8.0",
