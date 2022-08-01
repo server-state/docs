@@ -19,8 +19,8 @@
     "update:schema-docs": "graphql-markdown --no-toc --no-title --update-file ./develop/references/graphql-base-schema.md ./develop/references/schema.graphql"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-rc.1",
-    "@docusaurus/preset-classic": "2.0.0-rc.1",
+    "@docusaurus/core": "2.0.1",
+    "@docusaurus/preset-classic": "2.0.1",
     "@mdx-js/react": "1.6.22",
     "@svgr/webpack": "6.3.1",
     "clsx": "1.2.1",
